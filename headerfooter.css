@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: 'Darker Grotesque', sans-serif;
+    background-color: #f6f6f6;
+  }
+  
+   /* Headerindstillinger */
+  .header {
+    background-color: white;
+    padding: 20px 40px;
+  }
+  
+  .nav {
+    max-width: 1200px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left,
+  .nav-right {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    padding: 0;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+
+  nav a:hover {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .logo img {
+    height: 70px;
+  }
+
+  .nav-right img{
+    height: 25px;
+    margin-left: auto;
+  }
+  
+
+
+   /* Footerindstillinger */
+  .footer {
+    background-color: white;
+    padding: 40px 20px;
+    font-family: 'Darker Grotesque', sans-serif;
+    color: #000;
+  }
+  
+  .footer-columns {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+  }
+  
+  .column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .column p,
+  .column input {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  
+  .footer-logo {
+    width: 140px;
+    margin-top: 15px;
+  }
+  
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .footer-socials img {
+    width: 24px;
+  }
+  
+  .footer-socials p {
+    font-size: 16px;
+    margin: 0 5px;
+  }
+
+  input {
+    outline: none; /* Fjerner fokusrammen */
+    border: #f6f6f6;
+    border-bottom: 1px solid black; /* Understregning */
+}
+
+  input::placeholder {
+    font-size: 12px; /* Juster skriftstørrelsen */
+    color: gray; /* Valgfrit: ændr farven på placeholder-teksten */
+    
+}
