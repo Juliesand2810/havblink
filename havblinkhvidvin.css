@@ -4,66 +4,166 @@
     height: 715px;
   }
 
-  
-    .kortsektion {
-        background-image: url('images/tegnetkort.png'); /* stien til dit billede */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 100px 20px;
-        position: relative;
-      }
-      
-      .kort-indhold {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: white;
-        padding: 50px 30px;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-        position: relative;
-        z-index: 2;
-        text-align: center;
-      }
-      
-      .kort-indhold h2 {
-        font-size: 28px;
-        margin-bottom: 10px;
-      }
-      
-      .kort-indhold hr {
-        width: 40px;
-        margin: 20px auto;
-        border: 1px solid #aaa;
-      }
-      
+  main {
+    font-family: 'Darker Grotesque', sans-serif;
+    background-color: #F8F5F0;
+    padding: 0;
+    margin: 0;
+  }
 
-      .kortsektion {
-        background-image: url('img/baggrund-kort.png'); /* ← Ret stien til din fil */
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-        background-position: bottom;
-        padding: 150px 20px;
-        min-height: 600px; /* Sørger for at hele baggrunden vises */
-        position: relative;
-      }
-      
-    
-      
-      .kortsektion::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 300px;
-        background-image: url('img/baggrund-kort.png'); /* Hvis du vil lægge det ovenpå */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        z-index: 1;
-        pointer-events: none;
-      }
   
+  .kortsektion {
+    position: relative;
+    width: 100%;
+  }
+  
+  
+  .kortsektion img {
+    width: 100%;
+  }
+
+  .kort-baggrund {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .intro {
+    position: absolute;
+    top: 25%; /* højden fra heri til tekst */
+    left: 50%;
+    transform: translate(-50%, -30%);
+    width: 60%;
+    text-align: center;
+  }
+  
+  
+  .intro h1 {
+    font-family: 'Italiana', serif;
+    font-weight: 300;
+    font-size: 30px;
+  }
+
+  .intro hr {
+    width: 40px;
+    border: 1px solid black;
+    margin: 20px auto;
+  }
+
+  .intro p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .produkt-sektion {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .boks {
+    flex: 1;
+  }
+  
+  .billede-boks img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Billedet fylder hele boksen */
+  }
+  
+  .tekst-boks {
+    position: relative;
+    padding: 40px;
+    background-color: #FCFBF9
+  }
+
+  .tekst-boks p{
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .tekst-boks h2 {
+    font-family: 'Italiana', serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .bar {
+    background-color: #eee;
+    height: 15px;          /* Gør baren højere */
+    width: 70%;            /* Fyld op til 80% af forældreelementet (tekst-boksen) */
+    max-width: 500px;      /* Maks bredde på bar */
+  }
+  
+  .bar-fill {
+    background-color: black;
+    height: 100%;
+  }
+
+  .egenskaber p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .pris-container {
+    position: absolute; /* Gør det muligt at placere containeren præcist */
+    bottom: 40px; /* Placer den 10px fra bunden */
+    right: 10px; /* Placer den 10px fra højre */
+    text-align: right; /* Juster indholdet til højre */
+  }
+
+  .pris {
+    font-size: 18px; /* Juster skriftstørrelsen, hvis nødvendigt */
+    font-weight: bold; /* Valgfrit: Gør teksten fed */
+    margin-right: 30px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+}
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+    display: inline-block;
+}
+
+.left-arrow {
+    left: -50px;   /* Justér som du ønsker */
+}
+
+.right-arrow {
+    right: -50px;  /* Justér som du ønsker */
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.2); /* Centrer og forstør */
+}
+
+  
+
+  
+
+
 
  

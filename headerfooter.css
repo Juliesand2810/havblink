@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Darker Grotesque', sans-serif;
-    background-color: #f6f6f6;
+    background-color: #F8F5F0;
   }
   
    /* Headerindstillinger */
@@ -28,15 +28,17 @@ body {
   }
   
   .nav a {
-    text-decoration: none;
+    text-decoration: none; /* Starter uden streg */
     color: black;
     font-size: 20px;
-  }
+    transition: font-weight 0.3s ease, border-bottom 0.3s ease; /* Tilføjer en glidende overgang for hover-effekt */
+}
 
-  nav a:hover {
-    color: black;
-    font-weight: bold;
-  }
+.nav a:hover {
+  font-weight: bold;            /* Hover-effekt: fed tekst */
+  border-bottom: 2px solid black; /* Understregning ved hover */
+}
+
   
   .logo img {
     height: 70px;
