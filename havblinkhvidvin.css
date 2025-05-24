@@ -1,0 +1,69 @@
+/* HERO */
+.hero img {
+    width: 100%;
+    height: 715px;
+  }
+
+  
+    .kortsektion {
+        background-image: url('images/tegnetkort.png'); /* stien til dit billede */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 100px 20px;
+        position: relative;
+      }
+      
+      .kort-indhold {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 50px 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+      
+      .kort-indhold h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+      
+      .kort-indhold hr {
+        width: 40px;
+        margin: 20px auto;
+        border: 1px solid #aaa;
+      }
+      
+
+      .kortsektion {
+        background-image: url('img/baggrund-kort.png'); /* ← Ret stien til din fil */
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: bottom;
+        padding: 150px 20px;
+        min-height: 600px; /* Sørger for at hele baggrunden vises */
+        position: relative;
+      }
+      
+    
+      
+      .kortsektion::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background-image: url('img/baggrund-kort.png'); /* Hvis du vil lægge det ovenpå */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        z-index: 1;
+        pointer-events: none;
+      }
+  
+
+ 
