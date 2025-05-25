@@ -26,28 +26,40 @@ body {
     gap: 80px;
     padding: 0;
   }
-  
-  .nav a {
-    text-decoration: none; /* Starter uden streg */
-    color: black;
-    font-size: 20px;
-    transition: font-weight 0.3s ease, border-bottom 0.3s ease; /* Tilføjer en glidende overgang for hover-effekt */
-}
 
-.nav a:hover {
-  font-weight: bold;            /* Hover-effekt: fed tekst */
-  border-bottom: 2px solid black; /* Understregning ved hover */
-}
-
-  
   .logo img {
-    height: 70px;
+    height: 80px;
+  }
+
+  .logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);   /* Lidt større */
   }
 
   .nav-right img{
     height: 25px;
     margin-left: auto;
   }
+
+  /* Styling kun for links i ul li (ikke logoet) */
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: font-weight 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav ul li a:hover {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.nav ul li a.active {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+
   
 
 

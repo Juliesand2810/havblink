@@ -88,6 +88,6 @@ main {
     color: black;
     font-size: 16px;
     margin-left: 15px;    /* gør den lidt mere centreret */
-    border: 1px solid black;
-    box-sizing: border-box;
+  border: 1px solid black;
+  box-sizing: border-box;
   }

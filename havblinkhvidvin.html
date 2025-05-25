@@ -9,25 +9,25 @@
     <title>Havblinkhvidvin</title>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-          <ul class="nav-left">
-            <li><a href="#">Havblink Hvidvin</a></li>
-            <li><a href="#">Vin & mad</a></li>
-            <li><a href="#">Historien</a></li>
-          </ul>
-    
-          <div class="logo">
-            <img src="images/hb-logo.jpg" alt="Logo">
-          </div>
-    
-          <ul class="nav-right">
-            <li><a href="#">Besøg vingården</a></li>
-            <li><a href="#">Anmeldelser</a></li>
-            <img src="images/søgikon.jpg" alt="Logo">
-          </ul>
-        </nav>
-      </header>
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav-left">
+        <li><a href="index.html"class="active">Havblink Hvidvin</a></li>
+        <li><a href="vinmad.html">Vin & mad</a></li>
+        <li><a href="historien.html">Historien</a></li>
+      </ul>
+  
+      <div class="logo">
+        <a href="index.html"><img id="logo" src="images/hb-logo.jpg" alt="HBlogo"></a>
+      </div>
+  
+      <ul class="nav-right">
+        <li><a href="besog.html">Besøg vingården</a></li>
+        <li><a href="anmeldelser.html">Anmeldelser</a></li>
+        <li><img src="images/søgikon.jpg" alt="Søg ikon"></li>
+      </ul>
+    </nav>
+  </header>
 
       <main>
 
@@ -35,8 +35,6 @@
         <section class="hero">
           <img src="images/hbhero.jpg" alt="Vingård på Sydfyn">
         </section>
-
-       
         
         <section class="kortsektion">
           <img src="images/korttegning.jpg" alt="Kort baggrund" class="kort-baggrund">
@@ -52,35 +50,55 @@
           </div>
         </section>
 
+        <input type="checkbox" id="toggle" hidden>
+
         <section class="produkt-sektion">
-          <div class="arrow left-arrow">&lt;</div>
-
-          <div class="boks billede-boks">
-            <img src="images/havbrise.jpg" alt="Havbrise vin">
+          <label for="toggle" class="arrow left-arrow">&lt;</label>
+        
+          <!-- Indhold sæt 1 -->
+          <div class="indhold sæt1">
+            <div class="boks billede-boks">
+              <img src="images/havbrise.jpg" alt="Havbrise vin">
+            </div>
+            <div class="boks tekst-boks">
+              <h2>Havbrise</h2>
+              <p>Smagsprofil:
+                En elegant, frisk og tør hvidvin med citrus, grønne æbler og et strejf af havbrise. En let Solaris med et syrligt touch. </p>
+              <div class="egenskaber">
+                <p>SYRE</p><div class="bar"><div class="bar-fill" style="width: 80%;"></div></div>
+                <p>FRUGTIGHED</p><div class="bar"><div class="bar-fill" style="width: 50%;"></div></div>
+                <p>FYLDIGHED</p><div class="bar"><div class="bar-fill" style="width: 60%;"></div></div>
+              </div>
+              <div class="pris-container">
+                <p class="pris">299 DKK</p>
+                <a href="#" class="btn">KØB NU</a>
+              </div>
+            </div>
           </div>
         
-          <div class="boks tekst-boks">
-            <h2>Havbrise</h2>
-            <p>En elegant, frisk og tør hvidvin med citrus, grønne æbler og et strejf af havbrise. 
-              Velegnet til skaldyr og lette forretter. Lavet på solaris druen og dyrket på bæredygtig vis i dansk klima. </p>
-        
-            <div class="egenskaber">
-              <p>Syre</p>
-              <div class="bar"><div class="bar-fill" style="width: 60%;"></div></div>
-              <p>Frugtighed</p>
-              <div class="bar"><div class="bar-fill" style="width: 30%;"></div></div>
-              <p>Fyldighed</p>
-              <div class="bar"><div class="bar-fill" style="width: 50%;"></div></div>
+          <!-- Indhold sæt 2 -->
+          <div class="indhold sæt2">
+            <div class="boks billede-boks">
+              <img src="images/nyvin.jpg" alt="Nordlys vin">
             </div>
-        
-            <div class="pris-container">
-              <p class="pris">400 DKK</p>
-              <a href="#" class="btn">KØB NU</a>
+            <div class="boks tekst-boks">
+              <h2>Nordlys</h2>
+              <p>Smagsprofil:
+                Intens duft af smør, mango og lette krydderier 
+                Smagen er kompleks og fyldig med let fadpræg og en lang eftersmag.
+                En kraftigere Solaris med struktur .</p>
+              <div class="egenskaber">
+                <p>SYRE</p><div class="bar"><div class="bar-fill" style="width: 20%;"></div></div>
+                <p>FRUGTIGHED</p><div class="bar"><div class="bar-fill" style="width: 60%;"></div></div>
+                <p>FYLDIGHED</p><div class="bar"><div class="bar-fill" style="width: 80%;"></div></div>
+              </div>
+              <div class="pris-container">
+                <p class="pris">449 DKK</p>
+                <a href="#" class="btn">KØB NU</a>
+              </div>
             </div>
-
           </div>
-          
-          <div class="arrow right-arrow">&gt;</div>
+          <label for="toggle" class="arrow right-arrow">&gt;</label>
         </section>
 
 <footer>
