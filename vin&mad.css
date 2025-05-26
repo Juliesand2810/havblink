@@ -1,0 +1,276 @@
+/* GENERELT */
+main {
+    font-family: 'Darker Grotesque', sans-serif;
+    background-color: #F8F5F0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* HERO */
+  .hero img {
+    width: 100%;
+    height: 715px;
+  }
+
+  /* INTRO */
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .intro h1 {
+    font-family: 'Italiana', serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .intro hr {
+    width: 40px;
+    border: 1px solid black;
+    margin: 20px auto;
+  }
+
+  .intro p {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+
+  /*vin til stemning sektion*/
+  .vin-anledning {
+    padding: 25px 20px;
+    text-align: left; /* gør overskrift og tekst venstrestillet */
+  }
+  
+  .vin-anledning h2 {
+    font-family: 'Italiana', serif;
+    font-size: 25px;
+    font-weight: 300;
+    margin-left: 1%;
+  }
+  
+  .kort-container {
+    display: flex;
+    justify-content: space-between; /* Fordeler kortene jævnt over hele bredden */
+    flex-wrap: wrap; /* Gør responsiv. VED IKKE OM DEN OVERHOVEDET SKAL VÆRE DER */
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .kort {
+    flex: 1 1 30%;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    height: 550px; /* Gør hele kortet aflangt */
+    display: flex;
+    flex-direction: column;
+}
+  
+  .kort p {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: left; /* Venstrestillet tekst under billeder */
+  }
+
+  .kort img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth overgang */
+  }
+  
+  .kort img:hover {
+    opacity: 0.8; /* Gør billedet lidt gennemsigtigt */
+    transform: scale(1.05); /* Gør billedet en smule større */
+  }
+
+  .billede-container {
+    flex: 1; /* Fylder alt tilgængeligt plads i kortet */
+    height: 100%; /* Tilføj denne linje! */
+    overflow: hidden;
+}
+
+.billede-container img {
+    width: 100%;
+    height: 100%; /* Gør at billedet fylder hele containeren */
+    object-fit: cover; /* Sikrer at billedet beskæres pænt */
+}
+  
+  .kort:hover .overlay-text {
+    opacity: 1;
+  }
+
+  .kort {
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: left;
+  }
+
+  .kort:hover {
+    transform: scale(1.05); /* Forstør kortet en smule */
+    transition: transform 0.3s ease-in-out; /* Gør overgangen længere og glattere */
+  }
+  
+  .billede-container:hover .overlay-text {
+    opacity: 1; /* Vises kun ved hover */
+  }
+  
+  .billede-container:hover img {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; /* eller sort, alt efter baggrunden på billedet */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    width: auto; /* Lad teksten fylde sin egen bredde */
+  }
+  
+  .overlay-text p {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    background: none; /* Ingen baggrund */
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .btn-overlay {
+    display: inline-block;
+    background-color:  #A35D5D;; /* Hvid knap, hvis ønsket */
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding : 8px 16px; /* Gør knappen lidt større */
+    font-weight: lighter;
+  }
+
+  /*quiz sektion*/
+  .quiz-section {
+    display: flex;
+    height: 600px; /* Juster højden her */
+    max-width: 1400px;
+    padding: 2%;
+    margin-top: 60px;
+  }
+  
+  .quiz-tekst, .quiz-billede {
+    flex: 1; /* Halvdelen af bredden */
+  }
+  
+  .quiz-tekst {
+    padding: 40px;
+    background-color: #FCFBF9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .quiz-tekst h2 {
+    font-family: 'Italiana', serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  
+  .quiz-tekst p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .quiz-tekst .btn {
+    margin-top: 20px;
+    padding: 8px;
+    width: 20%;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+  }
+  
+  .quiz-billede img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Tilpasser højden */
+  }
+
+   /*nederste sektion */
+  .vin-mad {
+    padding: 60px 20px;
+    background-color: #f8f5f0; 
+  }
+  
+  .vin-mad-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+  }
+  
+  .vin-mad-billede {
+    flex:50%;
+  }
+  
+  .vin-mad-billede img {
+    width: 100%;
+    height: 600px;
+    display: block;
+  }
+  
+  .vin-mad-tekst {
+    flex: 50%;
+    font-family: 'Darker Grotesque', sans-serif;
+  }
+  
+  .vin-mad-tekst h2 {
+    font-family: 'Italiana', serif;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  
+  .vin-mad-tekst p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+    .vin-mad-tekst ul {
+      margin-bottom: 50px;
+    }
+  
+  .vin-mad-tekst li {
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block; /* Sørger for, at transform fungerer */
+    padding: 8px 35px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.3s ease; /* Tilføjer en glidende effekt */
+}
+
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  
+  
+  
+  
+  

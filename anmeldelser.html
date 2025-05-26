@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="headerfooter.css">
     <link rel="stylesheet" href="anmeldelser.css">
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>Havblink</title>
+    <title>Andmeldelser</title>
 </head>
 <body>
   <header class="header">
@@ -29,7 +29,120 @@
     </nav>
   </header>
 
-<footer>
+  <main>
+
+    <main>
+
+        <!-- Hero billede -->
+        <section class="hero">
+          <img src="images/bearedygtighero.jpg" alt="Vingård på Sydfyn">
+        </section>
+       
+        <!-- Kundernes favorit overskrift -->
+         <section class="overskrift">
+            <h1 class="produkt-overskrift">Kundernes favorit</h1>
+            <hr>
+        </section>
+        
+        <section class="produkt-sektion">
+        
+          <!-- Indhold sæt 1 -->
+          <div class="indhold sæt1">
+            <div class="boks billede-boks">
+              <img src="images/havbrise.jpg" alt="Havbrise vin">
+            </div>
+
+            <div class="boks tekst-boks">
+              <h2>Havbrise</h2>
+              <p>Smagsprofil:
+                En elegant, frisk og tør hvidvin med citrus, grønne æbler og et strejf af havbrise. En let Solaris med et syrligt touch. </p>
+              <div class="egenskaber">
+                <p>SYRE</p><div class="bar"><div class="bar-fill" style="width: 80%;"></div></div>
+                <p>FRUGTIGHED</p><div class="bar"><div class="bar-fill" style="width: 50%;"></div></div>
+                <p>FYLDIGHED</p><div class="bar"><div class="bar-fill" style="width: 60%;"></div></div>
+              </div>
+              <div class="pris-container">
+                <p class="pris">299 DKK</p>
+                <a href="#" class="btn">KØB NU</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Anmeldelser sektion -->
+        <input type="checkbox" id="toggle-anmeldelser" hidden>
+
+        <section class="anmeldelser">
+            <h2>Anmeldelser</h2>
+            <hr>
+
+             <!-- Venstre pil -->
+             <label for="toggle-anmeldelser" class="arrow left-arrow">&lt;</label>
+
+             <!-- Sæt 1: Anmeldelser -->
+            <div class="anmeldelser-container sæt1">
+                <div class="anmeldelse">
+                    <p class="citat">“4 hvidvine med karakter – dejlig til både mad og hygge, men strandkit, fantastisk friskhed og duft – klart en ny favorit. 
+                        Gitte og Tom formår virkslig at sætte deres personlige touch på både deres vin og hos Havblink vingård. ”</p>
+                    <p class="navn">Ninna, 27 år</p>
+                    <p class="hjerter">❤️❤️❤️❤️🤍</p>
+                </div>
+                <div class="anmeldelse">
+                    <p class="citat">“Jeg drikker normalt ikke dansk vin, men Havbrise – Den perfekte hvidvin til grillmad og gode venner. 
+                        Jeg kan slet ikke vente med at afptøve deres 3 andre varianter er sikker på de heller ikke skuffer på hverken kvalitet eller smag. ”</p>
+                    <p class="navn">Michael, 35 år</p>
+                    <p class="hjerter">❤️❤️❤️❤️❤️</p>
+                </div>
+                <div class="anmeldelse">
+                    <p class="citat">“Havblink rammer plet med en moderne og frisk stil. Jeg er imponeret over hvad dansk vin kan!
+                        Det er bestemt ikke sidste gang jeg vælger en dansk vin og bestemt heller ikke sidste gang jeg besøger Gitte og Tom hos Havblink vingård.”</p>
+                    <p class="navn">Signe, 32 år</p>
+                    <p class="hjerter">❤️❤️❤️🤍🤍</p>
+                </div>
+            </div>
+
+             <!-- Sæt 2: Anmeldelser -->
+            <div class="anmeldelser-container sæt2">
+                 <div class="anmeldelse">
+                    <p class="citat">“Fantastisk vinoplevelse. Jeg var til vinsmagning på Havblink vingård og WOW nogle helt igennem fantastiske vine. 
+                        Lige netop disse vine er nogle man gerne vil betale prisen for. Lavet med sjæl og med omtanke for miljøet. Min favorit var klart Norlysm dyb,men fyldt med smag”</p>
+                    <p class="navn">Anders, 29 år</p>
+                    <p class="hjerter">❤️❤️❤️❤️🤍</p>
+                </div>
+                <div class="anmeldelse">
+                    <p class="citat">“Jeg blev overrasket over kvaliteten af Havblink hvidvine. jeg havde list en forstilling om at dansk vin ikke kunne leve op til de udenlandske,
+                        men der tog jeg fejl. For mig er der også noget nostalgisk over at den danske sjæl der er i vinen. Jeg er en stolt dansk vinentusiast og kommer besetmt ilbage til Havblink”</p>
+                    <p class="navn">Sofie, 31 år</p>
+                    <p class="hjerter">❤️❤️❤️❤️❤️</p>
+                </div>
+                <div class="anmeldelse">
+                    <p class="citat">“Skøn vin til hyggelige aftener. 4 forskellige vine, men med samme historie og kvalitet. Et dansk håndværk bygget på sjæl og bæredygtighed. Lige i min ånd,
+                        her må jeg bare sige at Gitte og Tom rammer plet på Hvidvine i top kvalitet og yders velsmagende.”</p>
+                    <p class="navn">Jonas, 34 år</p>
+                    <p class="hjerter">❤️❤️❤️❤️🤍</p>
+            </div>
+    </div>
+              <!-- Højre pil -->
+              <label for="toggle-anmeldelser" class="arrow right-arrow">&gt;</label>
+
+            <a href="#" class="btn">LÆS MERE</a>
+        </section>
+
+        <!-- del din oplevelse sektion -->
+        <section class="delnu-sektion">
+            <div class="oplevelse-billede">
+                <img src="images/deldinoplevelse.jpg" alt="Del din oplevelse">
+            </div>
+            <div class="oplevelse-tekst">
+                <h2>Del din havblink oplevelse <br> med os lige her</h2>
+                <a href="#" class="btn-del">DEL NU</a>
+            </div>
+        </section>
+  </main>
+
+  
+
+  <footer>
 
     <footer class="footer">
         <div class="footer-columns">
@@ -67,6 +180,6 @@
         </div>
       </footer>
 </footer>
-    
+
 </body>
 </html>

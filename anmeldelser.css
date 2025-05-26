@@ -1,0 +1,291 @@
+
+  main {
+    font-family: 'Darker Grotesque', sans-serif;
+    background-color: #F8F5F0;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* HERO */
+.hero img {
+    width: 100%;
+    height: 700px;
+  }
+
+  .produkt-overskrift {
+    font-family: 'Italiana', serif;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 40px; /* Giver luft omkring */
+    text-align: center;
+  }
+
+  .overskrift hr {
+    width: 40px;
+    border: 1px solid black;
+    margin: 60px auto;
+  }
+  
+  .produkt-sektion {
+    display: flex;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box; /* Gør at padding og border tæller med i elementets bredde */
+    padding: 40px; /* Tilføjet padding for at give luft omkring indholdet */
+    padding-bottom: 0; /* Ingen bundpadding, da der er en boks under */
+    padding-top: 0;
+  }
+
+  .indhold {
+    display: flex;
+    width: 100%;
+  }
+  
+  .boks {
+    flex: 1;
+  }
+  
+  .billede-boks img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .tekst-boks {
+    position: relative;
+    padding: 40px;
+    background-color: #FCFBF9;
+  }
+  
+  .tekst-boks p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  
+  .tekst-boks h2 {
+    font-family: 'Italiana', serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .bar {
+    background-color: #eee;
+    height: 15px;
+    width: 70%;
+    max-width: 500px;
+  }
+  
+  .bar-fill {
+    background-color: #A35D5D;
+    height: 100%;
+  }
+  
+  .egenskaber p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .pris-container {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    text-align: right;
+  }
+  
+  .pris {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 30px;
+  }
+  
+  .btn {
+    padding: 8px 50px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.1);
+  }
+
+  /* Anmeldelser sektion*/
+  .anmeldelser {
+    text-align: center;
+    padding: 60px 20px;
+    line-height: 30px;
+    position: relative; /* <-- Tilføjet, gør pilene relative til denne sektion */
+}
+
+.anmeldelser h2 {
+    font-family: 'Italiana', serif;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.anmeldelser hr {
+    width: 40px;
+    border: 1px solid black;
+    margin: 60px auto;
+  }
+
+
+.anmeldelser-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap; /* Responsivt */
+}
+
+.anmeldelse {
+    padding: 20px;
+    max-width: 300px;
+    flex: 1;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Placerer indholdet, så det fylder hele højden */
+    height: 400px; /* Eller en anden fast højde */
+}
+
+.anmeldelse::before {
+    content: "“"; /* Viser venstre anførselstegn */
+    font-size: 150px;
+    color: #bdb5ac; /* En blød farve som i dit eksempel */
+    display: block;
+    margin-left: -60%;
+    margin-bottom: -5%;
+}
+
+.anmeldelse .citat {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.anmeldelse .navn {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.anmeldelse .hjerter {
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-top: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 50px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    margin-top: 100px;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    color: black;
+    z-index: 10; /* Sørg for at pile er foran alt */
+}
+
+.left-arrow {
+    left: 5%; /* afstand til venstre side */
+}
+
+.right-arrow {
+    right: 5%; /* afstand til højre side*/
+}
+
+.arrow:hover {
+    transform: translateY(-50%) scale(1.2); /* Lidt forstørrelse ved hover */
+}
+
+input[type="checkbox"]#toggle-anmeldelser {
+    display: none;
+}
+
+.sæt2 {
+    display: none;
+}
+
+#toggle-anmeldelser:checked ~ .anmeldelser .sæt1 {
+    display: none;
+}
+
+#toggle-anmeldelser:checked ~ .anmeldelser .sæt2 {
+    display: flex;
+}
+
+/* del din oplevelse sektion*/
+  .delnu-sektion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    margin-bottom: 5%;
+}
+
+.oplevelse-billede {
+    flex: 1;
+}
+
+.oplevelse-billede img {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+.oplevelse-tekst {
+    flex: 1;
+    text-align: center;
+    background-color: #FCFBF9;
+    height: 500px;
+    display: flex; 
+    flex-direction: column; /* sætter indholdet i en kolonne */
+    justify-content: center; /* Centrer indholdet vertikalt */
+}
+
+.oplevelse-tekst h2 {
+    font-family: 'Italiana', serif;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.btn-del {
+    padding: 8px 50px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin: 0 auto; /* Centrerer knappen horisontalt */
+}
+
+.btn-del:hover {
+    transform: scale(1.1);
+}
+
+
+  
+  
