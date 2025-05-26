@@ -1,0 +1,81 @@
+/* GENERELT */
+main {
+    font-family: 'Darker Grotesque', sans-serif;
+    background-color: #F8F5F0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* INTRO */
+.intro {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .intro h1 {
+    font-family: 'Italiana', serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .intro hr {
+    width: 40px;
+    border: 1px solid black;
+    margin: 20px auto;
+  }
+
+  .intro p {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+
+  .smagsprofiler {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    padding: 40px;
+  }
+  
+  .smagsprofil {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #FCFBF9;;
+    height: 600px;
+  }
+
+  .smagsprofil.højre {
+    flex-direction: row-reverse; /* Bytter rækkefølgen af billedet og teksten */
+}
+  
+  .billede-container {
+    flex: 1 1 50%;
+  }
+  
+  .billede-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    height: 600px;
+  }
+  
+  .tekst-container {
+    flex: 1 1 50%;
+  }
+  
+  .tekst-container h3 {
+    font-size: 35px;
+  }
+  
+  .tekst-container p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
