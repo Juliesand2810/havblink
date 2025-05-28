@@ -59,74 +59,231 @@ body {
   border-bottom: 2px solid black;
 }
 
+.dropdown {
+  position: relative;
+}
 
-  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Vis dropdown lige under linket */
+  left: 0;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  padding: 10px 15px;
+}
+
+.dropdown-content li a {
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 
-   /* Footerindstillinger */
-  .footer {
-    background-color: white;
-    padding: 40px 20px;
-    font-family: 'Darker Grotesque', sans-serif;
-    color: #000;
+/* Footerindstillinger */
+.footer {
+  background-color: white;
+  padding: 40px 20px;
+  font-family: 'Darker Grotesque', sans-serif;
+  color: #000;
+}
+
+.footer-columns {
+  display: flex;
+  max-width: 1000px; /* Kontrolleret container */
+  margin: auto;
+  justify-content: center; /* Centrerer samlet set */
+  gap: 60px; /* Giver luft mellem kolonnerne */
+}
+
+.column {
+  width: 100%; /* Ensartet fast bredde til alle kolonner */
+  display: flex;
+  flex-direction: column;
+}
+
+.column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.column p, .column input {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-top: 15px;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.footer-socials img {
+  width: 40px;
+}
+
+.footer-socials p {
+  font-size: 20px;
+  margin: 0 5px;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input::placeholder {
+  font-size: 12px;
+  color: gray;
+}
+
+.icon-right {
+  display: none;
+}
+
+
+/* --- RESPONSIV TILFØJELSE --- */
+.nav-mobile, .burger-menu {
+  display: none;
+}
+
+/* Burger-menu kun under 768px */
+@media screen and (max-width: 768px) {
+  .nav-left, .nav-right {
+      display: none; /* Skjul desktop-menu */
   }
-  
+
+  .burger-menu {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+  }
+
+  .burger-menu span {
+      display: block;
+      height: 3px;
+      background: black;
+      margin: 5px 0;
+      transition: 0.3s;
+  }
+
+  /* Mobilmenu styling */
+  .nav-mobile {
+      display: none;
+      position: absolute;
+      top: 60px; /* Tilpas til headerhøjde */
+      left: 0;
+      right: 0;
+      background-color: white;
+      list-style: none;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      width: 200px;
+  }
+
+  #menu-toggle:checked ~ .nav-mobile {
+      display: block;
+  }
+
+  .nav-mobile li {
+      margin: 10px 0;
+  }
+
+  .nav-mobile li a {
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+  }
+
+  /* Sub-dropdown styling */
+  .sub-dropdown {
+      display: none;
+      list-style: none;
+      padding-left: 15px;
+  }
+
+  .nav-mobile li:hover .sub-dropdown {
+      display: block;
+  }
+
+  .icon-right{
+    display: block;
+  }
+
+  .icon-right img {
+    width: 24px; /* Juster bredden */
+    height: auto; /* Bevar proportionerne */
+}
+
+  /* Footer-mobil */
   .footer-columns {
-    display: flex;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  .column {
-    flex: 1;
-    min-width: 250px;
-    margin: 10px;
-  }
-  
-  .column h4 {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  .column p,
-  .column input {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-  
-  
-  .footer-logo {
-    width: 140px;
-    margin-top: 15px;
-  }
-  
-  .footer-socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 30px;
-  }
-  
-  .footer-socials img {
-    width: 24px;
-  }
-  
-  .footer-socials p {
-    font-size: 16px;
-    margin: 0 5px;
-  }
-
-  input {
-    outline: none; /* Fjerner fokusrammen */
-    border: #f6f6f6;
-    border-bottom: 1px solid black; /* Understregning */
+    display: grid;
+    grid-template-areas: 
+        "newsletter newsletter"
+        "info hours";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 100%;
 }
 
-  input::placeholder {
-    font-size: 12px; /* Juster skriftstørrelsen */
-    color: gray; /* Valgfrit: ændr farven på placeholder-teksten */
-    
+.footer-columns .newsletter {
+    grid-area: newsletter;
+    text-align: left; /* Ændret fra center til venstrejusteret */
 }
+
+.footer-columns .info {
+    grid-area: info;
+    text-align: left; /* Venstrejusteret */
+}
+
+.footer-columns .hours {
+    grid-area: hours;
+    text-align: left; /* Venstrejusteret */
+}
+
+.footer-logo {
+    display: none;
+}
+
+input {
+  width: 80%; /* Fylder hele containerens bredde */
+}
+
+.footer-socials p {
+  font-size: 18px;
+}
+
+.footer-socials {
+  flex-direction: row; /* Ikoner ved siden af teksten */
+}
+.footer-socials img {
+  width: 30px; /* Juster størrelsen på billederne */
+}
+}
+
+
+
+

@@ -7,11 +7,38 @@ main {
   }
   
   /* HERO */
+
   .hero img {
     width: 100%;
-    height: 715px;
+    height: 735px;
+  }
+  .hero {
+    position: relative; /* Sørger for, at indholdet kan placeres relativt til hero-containeren */
+    display: flex; /* Brug Flexbox til centrering */
+    justify-content: center; /* Centrerer horisontalt */
+    align-items: center; /* Centrerer vertikalt */
+    height: 715px; /* Sørger for, at hero-containeren har samme højde som billedet */
   }
 
+.hero h1 {
+    text-align: center;
+    font-family: 'Italiana', serif;
+    font-size: 120px;
+    font-weight: lighter;
+    letter-spacing: 15px;
+    margin: 0; /* Fjern eventuel margin */
+    color: white; /* Gør teksten hvid for bedre kontrast */
+    position: absolute; /* Placerer teksten ovenpå billedet */
+}
+
+.hero p {
+    font-family: 'Italiana', serif;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-top: 300px; /* Tilføj afstand under h1 */
+    color: white; /* Gør teksten hvid for bedre kontrast */
+    position: absolute;
+}
   /* INTRO */
 .intro {
     text-align: center;
@@ -90,4 +117,59 @@ main {
     margin-left: 15px;    /* gør den lidt mere centreret */
   border: 1px solid black;
   box-sizing: border-box;
+  }
+
+  @media (max-width: 768px){
+    .hero{
+      height: 580px;
+  }
+  .hero img{
+      height: 480px
+  }
+  
+  .hero h1{
+      font-size: 60px; /* Mindre skriftstørrelse på små skærme */
+      left: 50%; /* Placerer elementet 50% ind fra venstre */
+      transform: translate(-50%, -50%); /* Flytter elementet tilbage med halvdelen af dets bredde og højde */
+  }
+
+  .hero p{
+      font-size: 35px; /* Mindre skriftstørrelse på små skærme */
+      top: 5%; /* Placerer elementet 50% ned fra toppen */
+      left: 50%; /* Placerer elementet 50% ind fra venstre */
+      transform: translate(-50%, -50%); /* Flytter elementet tilbage med halvdelen af dets bredde og højde */
+  }
+
+    .hero img {
+      height: 600px; /* Reducer højden på små skærme */
+      object-fit: cover; /* Sørger for, at billedet stadig ser godt ud */
+  }
+    .visual-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "item1"
+            "item2"
+            "item3";
+    }
+
+    .visual-grid > * {
+      height: 300px; /* Ens højde for alle bokse */
+      width: 500px;
+  }
+
+    .btn {
+        display: block;
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+        padding: 8px 16px;
+        background-color: white;
+        border: 1px solid black;
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        margin-left: 15px;    /* gør den lidt mere centreret */
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
   }

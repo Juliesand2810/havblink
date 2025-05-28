@@ -11,28 +11,131 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <ul class="nav-left">
-        <li><a href="index.html">Havblink Hvidvin</a></li>
-        <li><a href="vinmad.html"class="active">Vin & mad</a></li>
-        <li><a href="historien.html">Historien</a></li>
-      </ul>
-  
-      <div class="logo">
-        <a href="index.html"><img id="logo" src="images/hb-logo.jpg" alt="HBlogo"></a>
-      </div>
-  
-      <ul class="nav-right">
-        <li><a href="besog.html">Besøg vingården</a></li>
-        <li><a href="anmeldelser.html">Anmeldelser</a></li>
-        <li><img src="images/søgikon.jpg" alt="Søg ikon"></li>
-      </ul>
+        <!-- Burger-menu til mobil (kun vist under 768px) -->
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Mobilmenu dropdown -->
+        <ul class="nav-mobile">
+            <!-- Din eksisterende mobilmenu (uforandret) -->
+            <li><a href="havblinkhvidvin.html">Havblink Hvidvin</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Havbrise</a></li>
+                    <li><a href="#">Nordlys</a></li>
+                    <li><a href="#">Kysten</a></li>
+                    <li><a href="#">Strandklit</a></li>
+                </ul>
+            </li>
+            <li><a href="vinmad.html">Vin & mad</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Vin til din anledning</a></li>
+                    <li><a href="#">Find din smag</a></li>
+                    <li><a href="madmatch.html">Smagsprofiler & Madmatch</a></li>
+                </ul>
+            </li>
+            <li><a href="historien.html">Historien</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Vingårdens historie</a></li>
+                    <li><a href="#">Bag om produktionen</a></li>
+                    <li><a href="#">Bæredygtighed</a></li>
+                </ul>
+            </li>
+            <li><a href="besøgvingården.html">Besøg vingården</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Rundvisning på gården</a></li>
+                    <li><a href="#">Vinsmagning</a></li>
+                    <li><a href="#">Book en oplevelse</a></li>
+                </ul>
+            </li>
+            <li><a href="anmeldelser.html">Anmeldelser</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Kunde anmeldelser</a></li>
+                    <li><a href="#">Ekspertens valg</a></li>
+                    <li><a href="#">Del din oplevelse</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Desktop menu (vist på større skærme) -->
+        <ul class="nav-left">
+            <li class="dropdown">
+                <a href="havblinkhvidvin.html">Havblink Hvidvin</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Havbrise</a></li>
+                    <li><a href="#">Nordlys</a></li>
+                    <li><a href="#">Kysten</a></li>
+                    <li><a href="#">Strandklit</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="vin&mad.html" class="active">Vin & Mad</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Vin til din andlednig</a></li>
+                    <li><a href="#">Find din smag</a></li>
+                    <li><a href="madmatch.html">Smagsprofiler og madmatch</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="historien.html">Historien</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Vingårdens historie</a></li>
+                    <li><a href="#">Bag om produktionen</a></li>
+                    <li><a href="#">Bæredygtighed i praksis</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="logo">
+            <a href="index.html"><img id="logo" src="images/hb-logo.jpg" alt="HBlogo"></a>
+        </div>
+
+        <ul class="nav-right">
+            <li class="dropdown">
+                <a href="besøgvingården.html">Besøg vingården</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Rundvisning på gården</a></li>
+                    <li><a href="#">Vinsmagning</a></li>
+                    <li><a href="#">Book en oplevelse</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="anmeldelser.html">Anmeldelser</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Kundeanmeldelser</a></li>
+                    <li><a href="#">Ekspertens valg</a></li>
+                    <li><a href="#">Del din oplevelse</a></li>
+                </ul>
+            </li>
+            <li><img src="images/søgikon.jpg" alt="Søg ikon"></li>
+        </ul>
+
+        <!--Søg-ikon til højre (kun mobil) -->
+        <div class="icon-right">
+            <img src="images/søgikon.jpg" alt="søg ikon">
+        </div>
     </nav>
-  </header>
+</header>
 
   <main>
+
+    <!-- Tilbage pil -->
+    <div class="tilbage">
+        <a href="index.html">
+            <img src="images/pil.gif" alt="Pil">
+        </a>
+    </div>
+
       <!-- Intro tekst -->
       <section class="intro">
-        <h1>Smagsprofiler og Madmatch</h1>
+        <h2>Vin & Mad&nbsp;/&nbsp;Smagsprofiler & Madmatch</h2>
+        <h1>Smagsprofiler & Madmatch</h1>
         <hr>
         <p>
             Hos Havblink Hvidvin tror vi på, at den rette vin kan løfte et måltid til noget helt særligt. 
@@ -46,79 +149,107 @@
       <section class="smagsprofiler">
         <div class="smagsprofil">
           <div class="billede-container">
-            <img src="images/havbrise.jpg" alt="Havbrise og kysten">
+            <img src="images/mad1.jpg" alt="Havbrise og kysten">
           </div>
           <div class="tekst-container">
             <h3>Havbrise og kysten</h3>
-            <p><strong>Smagsprofil:</strong> Citrus, grønne æbler, høj syre, mineralsk og tør med ren afslutning.</p>
-            <p><strong>Perfekt til:</strong> Skaldyr, fisk, carpaccio eller sommerretter.</p>
+            <p><strong>Smagsprofil:</strong> <br> <br>Frisk og sprød vin med noter af citrus, grønne æbler og en markant høj syre. 
+                Mineralsk karakter og en tør, ren afslutning, der efterlader en læskende fornemmelse. 
+            </p>
+            <p><strong>Perfekt til:</strong> 
+                <ul>
+                    <li>Skaldyr: Nyd den til østers, blåmuslinger og krabbe – vinens friskhed fremhæver de delikate havsmage.</li>
+                    <li> Fisk: Ideel til røget og pocheret fisk, hvor syren skærer gennem fedmen. Prøv også til grillede grøntsager, carpaccio af fisk eller en citrusmarineret sommersalat.</li>
+                    <li>Serveringstip: Server den godt afkølet for at fremhæve den sprøde syre og mineralske karakter.</li>
+                  </ul>
+                </p>
           </div>
         </div>
 
         <div class="smagsprofil højre">
             <div class="billede-container">
-              <img src="images/havbrise.jpg" alt="Havbrise og kysten">
+              <img src="images/mad2.jpg" alt="Havbrise og kysten">
             </div>
+
             <div class="tekst-container">
-              <h3>Nordlys</h3>
-              <p><strong>Smagsprofil:</strong>Smør, mango, hvide krydderier, kompleks og struktureret med fadpræg..</p>
-              <p><strong>Perfekt til:</strong> Grillet kylling med urtesmør eller citrussauce, Laks med brunet smør, Svamperetter, Modnede oste som brie eller gruyère.</p>
-            </div>
+                <h3>Nordlys</h3>
+                <p><strong>Smagsprofil:</strong> <br> <br>Fyldig og kompleks vin med smøragtige noter, eksotisk mango og et strejf af hvide krydderier. 
+                    Struktureret med tydeligt fadpræg, som tilføjer dybde og karakter.
+
+
+                </p>
+                <p><strong>Perfekt til:</strong> 
+                    <ul>
+                        <li>Kød: Grillet kylling med urtesmør eller citrussauce, hvor vinens fylde og kompleksitet matcher de aromatiske nuancer.</li>
+                        <li>Fisk: Laks med brunet smør – den bløde struktur spiller smukt sammen med den rige fisk.</li>
+                        <li>Fed ret: Svamperetter, hvor vinens krydrede noter fremhæver umamismagen.</li>
+                        <li>Serveringstip: Servér den let afkølet for at fremhæve den bløde struktur og de krydrede toner.</li>
+                      </ul>
+                    </p>
+              </div>
           </div>
 
           <div class="smagsprofil">
             <div class="billede-container">
-              <img src="images/havbrise.jpg" alt="Havbrise og kysten">
+              <img src="images/mad3.jpg" alt="Havbrise og kysten">
             </div>
             <div class="tekst-container">
-              <h3>Strandklit</h3>
-              <p><strong>Smagsprofil:</strong> Modne pærer, hvide blomster, honningmelon, lavere syre, blød fylde.</p>
-              <p><strong>Perfekt til:</strong> Tapasmenuer, lette forreter, thairetter og desserter.
-              </p>
-            </div>
+                <h3>Strandklit</h3>
+                <p><strong>Smagsprofil:</strong> <br><br>Elegant og rund vin med smag af modne pærer, delikate hvide blomster og honningmelon. 
+                    Lav syre og blød fylde, der gør vinen silkeblød og let at nyde.
+                </p>
+                <p><strong>Perfekt til:</strong> 
+                    <ul>
+                        <li>Tapas: Skøn ledsager til småretter, hvor vinens milde sødme og blødhed understøtter smagsoplevelsen.</li>
+                        <li>Forretter: Lette retter med fisk eller grøntsager, hvor vinens florale og frugtagtige noter fremhæves.</li>
+                        <li>Dessert: Frugtbaserede desserter, hvor honningmelon og blomsteraromaer skaber en harmonisk afslutning.</li>
+                        <li>Serveringstip: Servér let afkølet for at fremhæve vinens friske og blomstrede karakter.</li>
+                      </ul>
+                    </p>
+              </div>
           </div>
-        
       </section>
   </main>
 
-<footer>
-
-    <footer class="footer">
-        <div class="footer-columns">
-          <div class="column">
+  <footer class="footer">
+    <div class="footer-columns">
+        <div class="column info">
             <h4>Information</h4>
             <p>
-              Havblink Vingård<br>
-              Adresse<br>
-              Tlf: +45 30462333<br>
-              Mail: havblink@hotmail.dk<br>
-              Indeholder alkohol –<br>
-              må ikke nydes af personer under 18 år
+                Havblink Vingård<br>
+                Adresse<br>
+                Tlf: +45 30462333<br>
+                Mail: havblink@hotmail.dk<br>
+                Indeholder alkohol –<br>
+                må ikke nydes af personer under 18 år
             </p>
-          </div>
-          <div class="column">
+        </div>
+        <div class="column hours">
             <h4>Havblink Vingård</h4>
             <p>
-              Åbningstider<br>
-              Alle hverdage<br>
-              kl. 10:00-18:00
+                Åbningstider<br>
+                Alle hverdage<br>
+                kl. 10:00-18:00
             </p>
-          </div>
-          <div class="column">
+        </div>
+        <div class="column newsletter">
             <h4>Tilmeld dig vores nyhedsbrev</h4>
             <input type="email" placeholder="INDTAST DIN E-MAIL HER">
             <img src="images/footerlogo.jpg" alt="Havblink logo" class="footer-logo">
-          </div>
         </div>
-      
-        <div class="footer-socials">
-          <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-          <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div>
+  
+    <div class="footer-socials">
+      <div class="social-item">
+          <a href="#"><img src="images/facebook.jpg" alt="Facebook"></a>
           <p>Facebook</p>
+      </div>
+      <div class="social-item">
+          <a href="#"><img src="images/insta.jpg" alt="Instagram"></a>
           <p>Instagram</p>
-        </div>
-      </footer>
-</footer>
-    
-</body>
-</html>
+      </div>
+  </div>
+  </footer>
+  
+  </body>
+  </html>

@@ -11,23 +11,117 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <ul class="nav-left">
-        <li><a href="index.html"class="active">Havblink Hvidvin</a></li>
-        <li><a href="vinmad.html">Vin & mad</a></li>
-        <li><a href="historien.html">Historien</a></li>
-      </ul>
-  
-      <div class="logo">
-        <a href="index.html"><img id="logo" src="images/hb-logo.jpg" alt="HBlogo"></a>
-      </div>
-  
-      <ul class="nav-right">
-        <li><a href="besog.html">Besøg vingården</a></li>
-        <li><a href="anmeldelser.html">Anmeldelser</a></li>
-        <li><img src="images/søgikon.jpg" alt="Søg ikon"></li>
-      </ul>
+        <!-- Burger-menu til mobil (kun vist under 768px) -->
+        <input type="checkbox" id="menu-toggle" hidden>
+        <label for="menu-toggle" class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Mobilmenu dropdown -->
+        <ul class="nav-mobile">
+            <!-- Din eksisterende mobilmenu (uforandret) -->
+            <li><a href="havblinkhvidvin.html">Havblink Hvidvin</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Havbrise</a></li>
+                    <li><a href="#">Nordlys</a></li>
+                    <li><a href="#">Kysten</a></li>
+                    <li><a href="#">Strandklit</a></li>
+                </ul>
+            </li>
+            <li><a href="vinmad.html">Vin & mad</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Vin til din anledning</a></li>
+                    <li><a href="#">Find din smag</a></li>
+                    <li><a href="madmatch.html">Smagsprofiler & Madmatch</a></li>
+                </ul>
+            </li>
+            <li><a href="historien.html">Historien</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Vingårdens historie</a></li>
+                    <li><a href="#">Bag om produktionen</a></li>
+                    <li><a href="#">Bæredygtighed</a></li>
+                </ul>
+            </li>
+            <li><a href="besøgvingården.html">Besøg vingården</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Rundvisning på gården</a></li>
+                    <li><a href="#">Vinsmagning</a></li>
+                    <li><a href="#">Book en oplevelse</a></li>
+                </ul>
+            </li>
+            <li><a href="anmeldelser.html">Anmeldelser</a>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Kunde anmeldelser</a></li>
+                    <li><a href="#">Ekspertens valg</a></li>
+                    <li><a href="#">Del din oplevelse</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Desktop menu (vist på større skærme) -->
+        <ul class="nav-left">
+            <li class="dropdown">
+                <a href="havblinkhvidvin.html"class="active">Havblink Hvidvin</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Havbrise</a></li>
+                    <li><a href="#">Nordlys</a></li>
+                    <li><a href="#">Kysten</a></li>
+                    <li><a href="#">Strandklit</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="vin&mad.html">Vin & Mad</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Vin til din andlednig</a></li>
+                    <li><a href="#">Find din smag</a></li>
+                    <li><a href="madmatch.html">Smagsprofiler og madmatch</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="historien.html">Historien</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Vingårdens historie</a></li>
+                    <li><a href="#">Bag om produktionen</a></li>
+                    <li><a href="#">Bæredygtighed i praksis</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="logo">
+            <a href="index.html"><img id="logo" src="images/hb-logo.jpg" alt="HBlogo"></a>
+        </div>
+
+        <ul class="nav-right">
+            <li class="dropdown">
+                <a href="besøgvingården.html">Besøg vingården</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Rundvisning på gården</a></li>
+                    <li><a href="#">Vinsmagning</a></li>
+                    <li><a href="#">Book en oplevelse</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="anmeldelser.html">Anmeldelser</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Kundeanmeldelser</a></li>
+                    <li><a href="#">Ekspertens valg</a></li>
+                    <li><a href="#">Del din oplevelse</a></li>
+                </ul>
+            </li>
+            <li><img src="images/søgikon.jpg" alt="Søg ikon"></li>
+        </ul>
+
+        <!--Søg-ikon til højre (kun mobil) -->
+        <div class="icon-right">
+            <img src="images/søgikon.jpg" alt="søg ikon">
+        </div>
     </nav>
-  </header>
+</header>
 
       <main>
 
@@ -50,7 +144,17 @@
           </div>
         </section>
 
-        <input type="checkbox" id="toggle" hidden>
+
+        <section class="filrer-bar">
+          <div class="filtrer">
+            <a href="#" class="se-alle">SE ALLE</a>
+            <div class="filter">
+              <span>FILTRER</span>
+              <button class="filter-btn">&#9660;</button> <!-- lille pil ned -->
+      
+            </div>
+          </div>
+        </section>
 
         <section class="produkt-sektion">
           <label for="toggle" class="arrow left-arrow">&lt;</label>
@@ -101,44 +205,45 @@
           <label for="toggle" class="arrow right-arrow">&gt;</label>
         </section>
 
-<footer>
-
-    <footer class="footer">
-        <div class="footer-columns">
-          <div class="column">
-            <h4>Information</h4>
-            <p>
-              Havblink Vingård<br>
-              Adresse<br>
-              Tlf: +45 30462333<br>
-              Mail: havblink@hotmail.dk<br>
-              Indeholder alkohol –<br>
-              må ikke nydes af personer under 18 år
-            </p>
+        <footer class="footer">
+          <div class="footer-columns">
+              <div class="column info">
+                  <h4>Information</h4>
+                  <p>
+                      Havblink Vingård<br>
+                      Adresse<br>
+                      Tlf: +45 30462333<br>
+                      Mail: havblink@hotmail.dk<br>
+                      Indeholder alkohol –<br>
+                      må ikke nydes af personer under 18 år
+                  </p>
+              </div>
+              <div class="column hours">
+                  <h4>Havblink Vingård</h4>
+                  <p>
+                      Åbningstider<br>
+                      Alle hverdage<br>
+                      kl. 10:00-18:00
+                  </p>
+              </div>
+              <div class="column newsletter">
+                  <h4>Tilmeld dig vores nyhedsbrev</h4>
+                  <input type="email" placeholder="INDTAST DIN E-MAIL HER">
+                  <img src="images/footerlogo.jpg" alt="Havblink logo" class="footer-logo">
+              </div>
           </div>
-          <div class="column">
-            <h4>Havblink Vingård</h4>
-            <p>
-              Åbningstider<br>
-              Alle hverdage<br>
-              kl. 10:00-18:00
-            </p>
-          </div>
-          <div class="column">
-            <h4>Tilmeld dig vores nyhedsbrev</h4>
-            <input type="email" placeholder="INDTAST DIN E-MAIL HER">
-            <img src="images/footerlogo.jpg" alt="Havblink logo" class="footer-logo">
-          </div>
+        
+          <div class="footer-socials">
+            <div class="social-item">
+                <a href="#"><img src="images/facebook.jpg" alt="Facebook"></a>
+                <p>Facebook</p>
+            </div>
+            <div class="social-item">
+                <a href="#"><img src="images/insta.jpg" alt="Instagram"></a>
+                <p>Instagram</p>
+            </div>
         </div>
-      
-        <div class="footer-socials">
-          <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-          <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-          <p>Facebook</p>
-          <p>Instagram</p>
-        </div>
-      </footer>
-</footer>
-    
-</body>
-</html>
+        </footer>
+        
+        </body>
+        </html>
