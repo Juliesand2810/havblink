@@ -4,6 +4,24 @@
     height: 735px;
   }
 
+  .hero {
+    position: relative; /* Sørger for, at indholdet kan placeres relativt til hero-containeren */
+    display: flex; /* Brug Flexbox til centrering */
+    height: 715px; /* Sørger for, at hero-containeren har samme højde som billedet */
+  }
+
+  .hero h1 {
+    font-family: 'Italiana', serif;
+    font-size: 80px;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    color: white; /* Gør teksten hvid for bedre kontrast */
+    position: absolute; /* Placerer teksten relativt til hero-containeren */
+    bottom:50px; /* Placer teksten 20px fra bunden */
+    right: 20px; /* Placer teksten 20px fra højre */
+    text-align: right; /* Juster teksten til højre */
+}
+
   main {
     font-family: 'Darker Grotesque', sans-serif;
     background-color: #F8F5F0;
@@ -100,13 +118,14 @@
   
   .boks {
     flex: 1;
+    height: 500px;
   }
   
   .billede-boks img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    height: 100%; /* Sørger for, at billedet fylder hele containerens højde */
+    object-fit: cover; /* Bevarer proportionerne og beskærer billedet */
+}
   
   .tekst-boks {
     position: relative;

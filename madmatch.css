@@ -109,3 +109,61 @@ main {
     font-size: 18px;
     margin-bottom: 10px;
   }
+
+  /* Responsiv design ved 768px */
+@media (max-width: 768px) {
+
+  .smagsprofiler {
+    gap: 30px; /* Reducer afstanden mellem boksene */
+    padding-bottom: 30px; /* Mindre padding i bunden */
+  }
+  
+  .smagsprofil,
+  .smagsprofil.højre {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 30px; /* Mindre afstand mellem boksene */
+  }
+
+  .billede-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .billede-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .tekst-container {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left; /* Venstrestiller alt indhold */
+    max-width: 600px;
+    padding: 10px 20px; /* Lidt mindre padding */
+    margin: 0 auto;
+  }
+
+  .tekst-container h3 {
+    font-size: 24px; /* Lidt mindre font */
+    margin-top: 10px; /* Tættere på billedet */
+    margin-bottom: 10px;
+  }
+
+  .tekst-container p, .tekst-container li {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .tekst-container ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+
+  .tilbage img {
+    left: 20px; /* Flyt tilbage-pilen tættere på kanten */
+  }
+}
