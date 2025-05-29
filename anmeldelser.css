@@ -402,6 +402,33 @@ input[type="checkbox"]#toggle-anmeldelser {
     margin-top: 60px; 
   }
   
+  .delnu-sektion {
+    flex-direction: column; /* Lægger billedet over teksten */
+    padding: 20px;
+    text-align: center; /* Centrerer teksten */
+  }
+
+  .oplevelse-billede img {
+    height: auto; /* Gør billedet responsivt */
+    max-height: 200px; /* Tilpas højden hvis nødvendigt */
+    object-fit: cover; /* Sikrer beskæring hvis nødvendigt */
+  }
+
+  .oplevelse-tekst {
+    width: 100%; /* Match bredden af billedet */
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #FCFBF9;
+    box-sizing: border-box;
+  }
+
+  .oplevelse-tekst h2 {
+    font-size: 24px; /* Mindre skriftstørrelse */
+    margin-bottom: 20px;
+  }
+
+  
+
 }
 
 
