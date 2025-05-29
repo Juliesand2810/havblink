@@ -9,8 +9,26 @@ main {
   /* HERO */
   .hero img {
     width: 100%;
-    height: 715px;
+    height: 700px;
   }
+
+  .hero {
+    position: relative; /* Sørger for, at indholdet kan placeres relativt til hero-containeren */
+    display: flex; /* Brug Flexbox til centrering */
+    height: 715px; /* Sørger for, at hero-containeren har samme højde som billedet */
+  }
+
+  .hero h1 {
+    font-family: 'Italiana', serif;
+    font-size: 80px;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    color: white; /* Gør teksten hvid for bedre kontrast */
+    position: absolute; /* Placerer teksten relativt til hero-containeren */
+    bottom: 20px; /* Placer teksten 20px fra bunden */
+    right: 20px; /* Placer teksten 20px fra højre */
+    text-align: right; /* Juster teksten til højre */
+}
 
   /* INTRO */
 .intro {
@@ -267,6 +285,143 @@ main {
   .btn:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: 768px) {
+    .hero {
+      height: 480px; /* Reducer højden på hero-containeren */
+    }
+
+  .hero img {
+      height: 100%; /* Reducer højden på billedet */
+      object-fit: cover; /* Sørger for, at billedet stadig fylder containeren korrekt */
+    }
+
+  .hero h1 {
+      font-size: 40px; /* Mindre skriftstørrelse */
+      bottom: 20px;
+      right: 0;
+      left: 0;
+    }
+    
+  .intro h1 {
+      font-size: 24px;
+    }
+
+    
+  .intro p {
+      font-size: 16px;
+    }
+    
+    /* Vin til stemning - kortene */
+    .kort-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .kort {
+      flex: 1 1 100%;
+      max-width: 90%;
+      margin: 20px 0;
+      height: auto; /* Tilpasser højden */
+    }
+  
+    .billede-container {
+      height: 300px; /* Juster billedhøjden for responsiv */
+    }
+  
+    .billede-container img {
+      object-fit: cover;
+    }
+
+        /* Skjul overlay og fjern hover-effekt på små skærme */
+  .billede-container .overlay-text {
+    display: none;
+  }
+
+  .billede-container:hover img {
+    transform: none;
+  }
+
+  .kort img:hover {
+    opacity: 1;
+    transform: none;
+  }
+
+  
+    /* Quiz sektion */
+    .quiz-section {
+      flex-direction: column;
+      height: auto; /* Fjern fast højde */
+      padding: 20px;
+      margin-top: -35px;
+    }
+  
+    .quiz-tekst, .quiz-billede {
+      flex: 1 1 100%;
+      width: 100%;
+      padding: 20px 0;
+    }
+
+    .quiz-billede {
+      order: 1; /* Sørger for, at billedet vises først */
+  }
+
+  .quiz-tekst {
+    order: 2; /* Sørger for, at teksten vises efter billedet */
+}
+  
+    .quiz-tekst h2 {
+      font-size: 24px;
+      margin-left: 20px;
+    }
+  
+    .quiz-tekst p {
+      font-size: 16px;
+      margin-left: 20px;
+    }
+  
+    .quiz-tekst .btn {
+      margin-left: 20px;
+    }
+  
+    .quiz-billede img {
+      height: 300px; /* Gør billedet mere mobilvenligt */
+      object-fit: cover;
+      margin-bottom: -25px;
+      
+    }
+  
+    /* Vin-mad sektion */
+    .vin-mad-container {
+      flex-direction: column;
+      margin-top: -10px;
+      margin-bottom: -10px;
+    }
+  
+    .vin-mad-billede img {
+      height: 300px;
+      object-fit: cover;
+    }
+  
+    .vin-mad-tekst h2 {
+      font-size: 24px;
+    }
+  
+    .vin-mad-tekst p {
+      font-size: 16px;
+    }
+  
+    .vin-mad-tekst li {
+      font-size: 16px;
+    }
+  
+    .vin-mad-tekst ul {
+      padding-left: 20px; /* Gør listerne pæne */
+      text-align: left;
+    }
+
+  }
+  
 
   
   

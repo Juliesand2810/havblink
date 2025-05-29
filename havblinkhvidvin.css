@@ -17,7 +17,7 @@
     letter-spacing: 10px;
     color: white; /* Gør teksten hvid for bedre kontrast */
     position: absolute; /* Placerer teksten relativt til hero-containeren */
-    bottom:50px; /* Placer teksten 20px fra bunden */
+    bottom: 20px; /* Placer teksten 20px fra bunden */
     right: 20px; /* Placer teksten 20px fra højre */
     text-align: right; /* Juster teksten til højre */
 }
@@ -115,17 +115,20 @@
     position: relative;
     margin-top: 0
   }
+
+  .sæt1, .sæt2 {
+    height: 600px; /* Begræns højden */
+}
   
   .boks {
     flex: 1;
-    height: 500px;
   }
   
   .billede-boks img {
     width: 100%;
-    height: 100%; /* Sørger for, at billedet fylder hele containerens højde */
-    object-fit: cover; /* Bevarer proportionerne og beskærer billedet */
-}
+    height: 100%;
+    object-fit: cover;
+  }
   
   .tekst-boks {
     position: relative;
@@ -233,6 +236,127 @@
     display: flex;
   }
 
+  @media (max-width: 768px) {
+
+    .hero {
+      height: 480px; /* Reducer højden på hero-containeren */
+  }
+
+  .hero img {
+      height: 100%; /* Reducer højden på billedet */
+      object-fit: cover; /* Sørger for, at billedet stadig fylder containeren korrekt */
+    }
+    .hero h1 {
+      font-size: 40px; /* Mindre skriftstørrelse på små skærme */
+      bottom: 50px; /* Juster placering */
+      right: 10px; /* Juster placering */
+      text-align: center; /* Centrer teksten */
+    }
+
+    .kortsektion {
+      position: relative;
+    }
+  
+    .kort-baggrund {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+
+    /* Tilpas header og tekst i introsektion */
+    .kortsektion {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0;
+      padding: 0;
+    }
+  
+    .kort-baggrund {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; /* Fylder hele kortsektionen */
+      z-index: 0;
+      object-fit: cover;
+    }
+  
+    .intro {
+      position: absolute; /* Behold absolute hvis du ønsker teksten ovenpå */
+      top: 10%; /* Flyt teksten længere ned på billedet */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      text-align: center;
+    }
+  
+    .intro h1, .intro p {
+      text-align: center;
+      color: black; /* Sørg for kontrast på baggrunden */
+    }
+  
+    .kortsektion {
+      min-height: 800px; /* Gør hele sektionen stor nok til at dække teksten */
+    }
+
+  .produkt-sektion {
+    padding: 40px;
+    margin: 0 auto;
+  }
+
+  .billede-boks {
+    display: none; /* Skjuler billeddelen */
+  }
+
+  .tekst-boks {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sæt1, .sæt2 {
+    height: 470px; /* Begræns højden */
+}
+
+  .bar {
+    width: 70%; /* Tilpas barbredden */
+  }
+
+  .pris-container {
+    position: static; /* Fjern absolut placering */
+    margin-top: 20px;
+  }
+
+  .arrow {
+        position: absolute; /* Sørger for, at pilene kan placeres relativt til boksen */
+        top: 50%; /* Placer pilene i midten af boksen */
+        transform: translateY(-50%); /* Juster placeringen for præcis centering */
+        font-size: 1.5rem; /* Bevar skriftstørrelsen */
+        color: black; /* Sørger for kontrast */
+    }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+
+  .tekst-boks h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .tekst-boks p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+  
   
 
   
