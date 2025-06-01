@@ -113,7 +113,7 @@
     margin: 40px auto;
     padding: 20px;
     position: relative;
-    margin-top: 0
+    margin-top: 0;
   }
 
   .sæt1, .sæt2 {
@@ -157,7 +157,7 @@
   }
   
   .bar-fill {
-    background-color: #A35D5D;
+    background-color: #D3D3B2;
     height: 100%;
   }
   
@@ -192,7 +192,9 @@
   
   .btn:hover {
     transform: scale(1.1);
-  }
+    background-color: #D3D3B2; /* Skift baggrund til sort */
+    color: black; /* Skift tekstfarve til hvid */
+}
   
   .arrow {
     position: absolute;
@@ -237,7 +239,6 @@
   }
 
   @media (max-width: 768px) {
-
     .hero {
       height: 480px; /* Reducer højden på hero-containeren */
   }

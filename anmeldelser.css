@@ -65,6 +65,10 @@
     object-fit: cover;
   }
   
+  .sæt1, .sæt2 {
+    height: 600px; /* Begræns højden */
+}
+
   .tekst-boks {
     position: relative;
     padding: 40px;
@@ -92,7 +96,7 @@
   }
   
   .bar-fill {
-    background-color: #A35D5D;
+    background-color: #D3D3B2;
     height: 100%;
   }
   
@@ -115,7 +119,6 @@
   }
   
   .btn {
-    padding: 8px 50px;
     border: 1px solid black;
     text-decoration: none;
     color: black;
@@ -125,14 +128,16 @@
     transition: transform 0.3s ease;
   }
   
-  .btn:hover {
+  .pris-container .btn:hover {
     transform: scale(1.1);
-  }
+    background-color: #D3D3B2; /* Skift baggrund til sort */
+    color: black; /* Skift tekstfarve til hvid */
+}
 
   /* Anmeldelser sektion*/
   .anmeldelser {
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
     line-height: 30px;
     position: relative; /* <-- Tilføjet, gør pilene relative til denne sektion */
 }
@@ -201,12 +206,12 @@
     border: 1px solid black;
     text-decoration: none;
     color: black;
-    margin-top: 100px;
+    margin-top: -30px;
     transition: transform 0.3s ease;
 }
 
 .btn:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .arrow {
@@ -369,25 +374,11 @@ input[type="checkbox"]#toggle-anmeldelser {
     width: auto;
   }
 
+  
+
   /* Pile-position */
   .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2 rem;
-    color: black;
-    cursor: pointer;
-    user-select: none;
-    z-index: 10;
-    margin: 20px;
-  }
-
-  .left-arrow {
-    left: 10px;
-  }
-
-  .right-arrow {
-    right: 10px;
+display: none; /* Skjul pile på mobil */
   }
 
   /* Gør sæt1 og sæt2 adaptive */
@@ -426,6 +417,8 @@ input[type="checkbox"]#toggle-anmeldelser {
     font-size: 24px; /* Mindre skriftstørrelse */
     margin-bottom: 20px;
   }
+
+  
 
   
 

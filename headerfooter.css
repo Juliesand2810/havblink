@@ -6,89 +6,120 @@ body {
   }
   
    /* Headerindstillinger */
-  .header {
+   header {
     background-color: white;
     padding: 20px 40px;
-  }
-  
-  .nav {
-    max-width: 1200px;
-    margin:auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav-left,
-  .nav-right {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* Sørger for midterjustering */
+  max-width: 1200px;
+  margin: auto;
+}
+
+.nav-left, .nav-right, .nav-left ul, .nav-right ul, .nav-mobile, .nav-mobile ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left, .nav-right {
     display: flex;
     gap: 80px;
-    padding: 0;
-  }
-
-  .logo img {
-    height: 80px;
-  }
-
-  .logo:hover {
-    cursor: pointer;
-    transform: scale(1.05);   /* Lidt større */
-  }
-
-  .nav-right img{
-    height: 25px;
-    margin-left: auto;
-  }
-
-  /* Styling kun for links i ul li (ikke logoet) */
-.nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  transition: font-weight 0.3s ease, border-bottom 0.3s ease;
 }
 
-.nav ul li a:hover {
-  font-weight: bold;
-  border-bottom: 2px solid black;
+.nav-left li, .nav-right li, .nav-mobile li {
+    position: relative;
 }
 
-.nav ul li a.active {
-  font-weight: bold;
-  border-bottom: 2px solid black;
+.nav-left li a, .nav-right li a, .nav-mobile li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
 }
 
-.dropdown {
-  position: relative;
+.nav-left li a:hover, .nav-right li a:hover {
+    font-weight: bold;
+    border-bottom: 2px solid black;
 }
+
+.nav-left li a.active, .nav-right li a.active {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%; /* Vis dropdown lige under linket */
-  left: 0;
-  background-color: white;
-  min-width: 200px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 110%; /* Justér placeringen for at undgå mellemrum */
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    list-style: none;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
-
-.dropdown-content li {
-  padding: 10px 15px;
-}
-
-.dropdown-content li a {
-  text-decoration: none;
-  color: black;
+.dropdown-content li, .sub-dropdown li {
+    padding: 10px 15px;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
+
+.logo img {
+    height: 80px;
+}
+
+.search-toggle, .icon-right {
+    position: relative;
+}
+
+.search-form {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    z-index: 1000;
+}
+
+.search-form input {
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 200px;
+}
+
+.search-toggle input:checked ~ .search-form,
+.icon-right input:checked ~ .search-form {
+    display: block;
+}
+
+.search-toggle label, .icon-right label {
+    cursor: pointer;
+}
+
+.burger-menu, .nav-mobile, .icon-right {
+    display: none;
+}
+
+.search-toggle label img, .icon-right label img {
+  height: 24px; /* Eller samme højde som font-size i menupunkter */
+  vertical-align: middle; /* Sørger for korrekt linjeføring */
+}
+
 
 
 /* Footerindstillinger */
@@ -158,9 +189,53 @@ input::placeholder {
   color: gray;
 }
 
-.icon-right {
-  display: none;
+/* Fælles styling for søgefelterne */
+.search-toggle, .icon-right {
+    position: relative;
 }
+
+.search-form {
+    display: none;
+    position: absolute;
+    top: 40px; /* Justér afhængigt af headerens højde */
+    right: 0;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    z-index: 1000;
+}
+
+.search-form input {
+    font-size: 14px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    width: 200px;
+}
+
+.search-toggle input[type="checkbox"]:checked ~ .search-form {
+    display: block;
+}
+
+.icon-right input[type="checkbox"]:checked ~ .search-form {
+    display: block;
+}
+
+.search-toggle label, .icon-right label {
+    cursor: pointer;
+}
+
+
+
+.icon-right {
+    display: none; /* skjul mobil version */
+}
+
+.search-toggle {
+    display: block; /* vis desktop version */
+}
+
 
 
 /* --- RESPONSIV TILFØJELSE --- */
@@ -168,15 +243,20 @@ input::placeholder {
   display: none;
 }
 
-/* Burger-menu kun under 768px */
-@media screen and (max-width: 768px) {
+.dropdown-toggle {
+    display: none;
+}
+
+
+/* Mobil layout */
+@media (max-width: 768px) {
   .nav-left, .nav-right {
-      display: none; /* Skjul desktop-menu */
+      display: none;
   }
 
   .burger-menu {
       display: block;
-      position: relative;
+      cursor: pointer;
       width: 30px;
       height: 20px;
   }
@@ -186,56 +266,89 @@ input::placeholder {
       height: 3px;
       background: black;
       margin: 5px 0;
-      transition: 0.3s;
-  }
-
-  /* Mobilmenu styling */
-  .nav-mobile {
-      display: none;
-      position: absolute;
-      top: 60px; /* Tilpas til headerhøjde */
-      left: 0;
-      right: 0;
-      background-color: white;
-      list-style: none;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      z-index: 1000;
-      width: 200px;
   }
 
   #menu-toggle:checked ~ .nav-mobile {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 110px;
+      left: 0;
+      background-color: white;
+      width: 100%;
+      padding: 20px;
+      z-index: 1000;
+      width: 80%; /* Reducer bredden til fx 80% */
+      max-width: 300px; /* Sæt en maksimal bredde */
+      padding: 15px; /* Justér padding for mindre skærme */
   }
 
   .nav-mobile li {
       margin: 10px 0;
   }
 
-  .nav-mobile li a {
-      text-decoration: none;
-      color: black;
-      font-size: 18px;
-  }
-
-  /* Sub-dropdown styling */
-  .sub-dropdown {
+  .nav-mobile li input[type="checkbox"] {
       display: none;
-      list-style: none;
-      padding-left: 15px;
   }
 
-  .nav-mobile li:hover .sub-dropdown {
+  .nav-mobile li .sub-dropdown {
+      display: none;
+      flex-direction: column;
+  }
+
+  .nav-mobile li input[type="checkbox"]:checked ~ .sub-dropdown {
+      display: flex;
+  }
+
+  .nav-mobile li a, .nav-mobile .dropdown-label {
+      font-size: 18px;
+      cursor: pointer;
+  }
+
+  .nav-mobile li a:hover, .nav-mobile .dropdown-label:hover {
+      font-weight: normal;
+      border-bottom: none;
+  }
+
+  .icon-right {
       display: block;
+      position: relative;
   }
 
-  .icon-right{
-    display: block;
+  .search-form input {
+      width: 150px;
   }
 
-  .icon-right img {
-    width: 24px; /* Juster bredden */
-    height: auto; /* Bevar proportionerne */
+  .dropdown-toggle {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;  /* Gør pilen mindre */
+    margin-left: 5px;  /* Mindre mellemrum */
+    color: #333;       /* Mørkere men stadig diskret */
+    transform: scale(0.8); /* Gør pilen mere kompakt */
+    font-weight: normal;   /* Fjern fed skrift */
+}
+
+.sub-dropdown {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    padding-left: 10px;
+}
+
+input[type="checkbox"]:checked + .dropdown-toggle + .sub-dropdown {
+    display: flex;
+}
+
+.nav-mobile li {
+    margin-bottom: 10px;
+}
+
+.dropdown-mainlink {
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
 }
 
   /* Footer-mobil */

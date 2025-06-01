@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,8 @@
     <title>Vin&mad</title>
 </head>
 <body>
-  <header class="header">
+  <header>
     <nav class="nav">
-        <!-- Burger-menu til mobil (kun vist under 768px) -->
         <input type="checkbox" id="menu-toggle" hidden>
         <label for="menu-toggle" class="burger-menu">
             <span></span>
@@ -19,48 +18,6 @@
             <span></span>
         </label>
 
-        <!-- Mobilmenu dropdown -->
-        <ul class="nav-mobile">
-            <!-- Din eksisterende mobilmenu (uforandret) -->
-            <li><a href="havblinkhvidvin.html">Havblink Hvidvin</a>
-                <ul class="sub-dropdown">
-                    <li><a href="#">Havbrise</a></li>
-                    <li><a href="#">Nordlys</a></li>
-                    <li><a href="#">Kysten</a></li>
-                    <li><a href="#">Strandklit</a></li>
-                </ul>
-            </li>
-            <li><a href="vinmad.html">Vin & mad</a>
-                <ul class="sub-dropdown">
-                    <li><a href="#">Vin til din anledning</a></li>
-                    <li><a href="#">Find din smag</a></li>
-                    <li><a href="madmatch.html">Smagsprofiler & Madmatch</a></li>
-                </ul>
-            </li>
-            <li><a href="historien.html">Historien</a>
-                <ul class="sub-dropdown">
-                    <li><a href="#">Vingårdens historie</a></li>
-                    <li><a href="#">Bag om produktionen</a></li>
-                    <li><a href="#">Bæredygtighed</a></li>
-                </ul>
-            </li>
-            <li><a href="besøgvingården.html">Besøg vingården</a>
-                <ul class="sub-dropdown">
-                    <li><a href="#">Rundvisning på gården</a></li>
-                    <li><a href="#">Vinsmagning</a></li>
-                    <li><a href="#">Book en oplevelse</a></li>
-                </ul>
-            </li>
-            <li><a href="anmeldelser.html">Anmeldelser</a>
-                <ul class="sub-dropdown">
-                    <li><a href="#">Kunde anmeldelser</a></li>
-                    <li><a href="#">Ekspertens valg</a></li>
-                    <li><a href="#">Del din oplevelse</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <!-- Desktop menu (vist på større skærme) -->
         <ul class="nav-left">
             <li class="dropdown">
                 <a href="havblinkhvidvin.html">Havblink Hvidvin</a>
@@ -71,54 +28,117 @@
                     <li><a href="#">Strandklit</a></li>
                 </ul>
             </li>
-
             <li class="dropdown">
-                <a href="vin&mad.html"class="active">Vin & Mad</a>
+                <a href="vin&mad.html">Vin & Mad</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Vin til din andlednig</a></li>
+                    <li><a href="#">Vin til din anledning</a></li>
                     <li><a href="#">Find din smag</a></li>
-                    <li><a href="madmatch.html">Smagsprofiler og madmatch</a></li>
+                    <li><a href="madmatch.html">Smagsprofiler & Madmatch</a></li>
                 </ul>
             </li>
-
             <li class="dropdown">
                 <a href="historien.html">Historien</a>
                 <ul class="dropdown-content">
                     <li><a href="#">Vingårdens historie</a></li>
-                    <li><a href="#">Bag om produktionen</a></li>
-                    <li><a href="#">Bæredygtighed i praksis</a></li>
+                    <li><a href="#">Bag produktionen</a></li>
+                    <li><a href="#">Bæredygtighed</a></li>
                 </ul>
             </li>
         </ul>
 
         <div class="logo">
-            <a href="index.html"><img id="logo" src="images/hb-logo.jpg" alt="HBlogo"></a>
+            <a href="#"><img src="images/hb-logo.jpg" alt="Logo"></a>
         </div>
 
         <ul class="nav-right">
             <li class="dropdown">
                 <a href="besøgvingården.html">Besøg vingården</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Rundvisning på gården</a></li>
+                    <li><a href="#">Rundvisning</a></li>
                     <li><a href="#">Vinsmagning</a></li>
-                    <li><a href="#">Book en oplevelse</a></li>
+                    <li><a href="#">Book oplevelse</a></li>
                 </ul>
             </li>
-
             <li class="dropdown">
                 <a href="anmeldelser.html">Anmeldelser</a>
                 <ul class="dropdown-content">
                     <li><a href="#">Kundeanmeldelser</a></li>
-                    <li><a href="#">Ekspertens valg</a></li>
-                    <li><a href="#">Del din oplevelse</a></li>
+                    <li><a href="#">Ekspertvalg</a></li>
+                    <li><a href="#">Del oplevelse</a></li>
                 </ul>
             </li>
-            <li><img src="images/søgikon.jpg" alt="Søg ikon"></li>
+            <li class="search-toggle">
+                <input type="checkbox" id="search-toggle-desktop" hidden>
+                <label for="search-toggle-desktop">
+                    <img src="images/søgikon.jpg" alt="Søg ikon">
+                </label>
+                <form class="search-form">
+                    <input type="text" placeholder="Søg her...">
+                </form>
+            </li>
         </ul>
 
-        <!--Søg-ikon til højre (kun mobil) -->
+        <ul class="nav-mobile">
+            <li>
+                <a href="havblinkhvidvin.html" class="dropdown-mainlink">Havblink Hvidvin</a>
+                <input type="checkbox" id="hvidvin-toggle" hidden>
+                <label for="hvidvin-toggle" class="dropdown-toggle">▼</label>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Havbrise</a></li>
+                    <li><a href="#">Nordlys</a></li>
+                    <li><a href="#">Kysten</a></li>
+                    <li><a href="#">Strandklit</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="vin&mad.html" class="dropdown-mainlink">Vin & Mad</a>
+                <input type="checkbox" id="vinmad-toggle" hidden>
+                <label for="vinmad-toggle" class="dropdown-toggle">▼</label>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Vin til din anledning</a></li>
+                    <li><a href="#">Find din smag</a></li>
+                    <li><a href="madmatch.html">Smagsprofiler & Madmatch</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="historien.html" class="dropdown-mainlink">Historien</a>
+                <input type="checkbox" id="historien-toggle" hidden>
+                <label for="historien-toggle" class="dropdown-toggle">▼</label>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Vingårdens historie</a></li>
+                    <li><a href="#">Bag produktionen</a></li>
+                    <li><a href="#">Bæredygtighed</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="besøgvingården.html" class="dropdown-mainlink">Besøg vingården</a>
+                <input type="checkbox" id="besog-toggle" hidden>
+                <label for="besog-toggle" class="dropdown-toggle">▼</label>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Rundvisning</a></li>
+                    <li><a href="#">Vinsmagning</a></li>
+                    <li><a href="#">Book oplevelse</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="anmeldelser.html" class="dropdown-mainlink">Anmeldelser</a>
+                <input type="checkbox" id="anmeldelser-toggle" hidden>
+                <label for="anmeldelser-toggle" class="dropdown-toggle">▼</label>
+                <ul class="sub-dropdown">
+                    <li><a href="#">Kundeanmeldelser</a></li>
+                    <li><a href="#">Ekspertvalg</a></li>
+                    <li><a href="#">Del oplevelse</a></li>
+                </ul>
+            </li>
+        </ul>
         <div class="icon-right">
-            <img src="images/søgikon.jpg" alt="søg ikon">
+            <input type="checkbox" id="search-toggle-mobile" hidden>
+            <label for="search-toggle-mobile">
+                <img src="images/søgikon.jpg" alt="Søg ikon">
+            </label>
+            <form class="search-form">
+                <input type="text" placeholder="Søg her...">
+            </form>
         </div>
     </nav>
 </header>

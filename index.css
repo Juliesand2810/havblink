@@ -104,6 +104,18 @@ main {
   text-align: center;
 }
 
+.grid-item .box-text {
+  position: absolute;
+  bottom: 75px; /* Placer teksten over knappen */
+  left: 40px;
+  font-size: 20px;
+  color: white; /* eller sort alt efter baggrund */
+}
+
+.grid-item.item1 .box-text {
+  color: black; /* Skift farven til den ønskede */
+}
+
 .btn {
     position: absolute;
     bottom: 25px;
@@ -119,6 +131,11 @@ main {
   box-sizing: border-box;
   }
 
+  .btn:hover {
+    transform: scale(1.1); /* Giver en let zoom-effekt ved hover */
+  }
+
+/* RESPONSIVE DESIGN */
   @media (max-width: 768px){
     .hero{
       height: 580px;
