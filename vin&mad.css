@@ -338,6 +338,10 @@ main {
     display: none;
   }
 
+  .billede-container:hover .overlay-text {
+    display: block;
+  }
+  
   .billede-container:hover img {
     transform: none;
   }
