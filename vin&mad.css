@@ -73,7 +73,6 @@ main {
   .kort-container {
     display: flex;
     justify-content: space-between; /* Fordeler kortene jævnt over hele bredden */
-    flex-wrap: wrap; /* Gør responsiv. VED IKKE OM DEN OVERHOVEDET SKAL VÆRE DER */
     max-width: 1400px;
     margin: 0 auto;
   }
@@ -338,10 +337,7 @@ main {
     display: none;
   }
 
-  .billede-container:hover .overlay-text {
-    display: block;
-  }
-  
+
   .billede-container:hover img {
     transform: none;
   }
